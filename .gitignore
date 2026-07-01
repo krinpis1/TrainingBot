@@ -1,0 +1,23 @@
+# Файлы конфигурации
+.env
+bot_config.py
+google_sheets_config.py
+*.json
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Виртуальное окружение
+venv/
+env/
+.venv/
+
+# Логи
+*.log
+
+# База данных
+*.sql
+*.sqlite
