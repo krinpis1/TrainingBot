@@ -35,3 +35,26 @@ DB_PASSWORD=пароль_бд
 DB_NAME=имя_базы_данных  
 DB_PORT=3306  
 ADMIN_USERNAME=@username  
+
+Структура:  
+├── .env                      # Конфигурация (токен бота, БД, админ)  
+├── main.py                   # Точка входа, регистрация обработчиков  
+├── config.py                 # Загрузка переменных окружения  
+├── database.py               # Работа с БД (репозитории)  
+├── bg_tasks.py               # Фоновые задачи (закрытие тренировок)  
+├── states.py                 # FSM состояния  
+├── my_classes.py             # Вспомогательные классы  
+├── handlers/  
+│   ├── start.py              # Обработка команды /start  
+│   ├── schedule_training_handlers.py  # Создание из расписания  
+│   ├── custom_training_handlers.py    # Создание с произвольными данными  
+│   ├── registration_handlers.py       # Запись/отмена записи  
+│   ├── cancel_training_handlers.py    # Отмена тренировки  
+│   └── new_user_handlers.py           # Регистрация пользователя  
+├── keyboards/                # Inline-клавиатуры  
+├── utils/                    # Вспомогательные функции  
+│   ├── permissions.py        # Проверка прав  
+│   ├── messages_utils.py     # Отправка/редактирование сообщений  
+│   ├── text_utils.py         # Форматирование текста  
+│   └── bot_utils.py          # Утилиты бота  
+└── requirements.txt          # Зависимости  
